@@ -1,0 +1,19 @@
+/* body{
+    background-image: url('https://cdn.pixabay.com/photo/2026/04/29/20/20/20-20-45-322_1280.jpg');
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+} */
+
+.box {
+    width: 300px;
+    height: 300px;
+    border: 10px dashed yellow;
+    background-origin: padding-box; 
+    
+    
+    background-image: url('https://media.istockphoto.com/id/2166551077/photo/technology-artificial-intelligence-digital-ai-hand-concept-on-cyber-future-business-tech.jpg?s=1024x1024&w=is&k=20&c=kgfP105cecd_F4nMdhIfweudSzDGyl0Ak5g_39dLDmE=');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0.7;
+}

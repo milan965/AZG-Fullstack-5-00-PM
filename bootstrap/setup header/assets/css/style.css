@@ -1,0 +1,40 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+.menu ul li{
+    margin-right: 20px;
+}
+
+.menu ul li a{
+    font-size: 18px;
+    color: black;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+.projects .project-title{
+    /* border-bottom: 1px solid gray; */
+    margin-bottom: 10px;
+}
+.projects .project-title p{
+    font-weight: 400;
+}
+.projects .project-content .project-lable{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    width: 60%;
+}
+
+.projects .project-content{
+    position: relative;
+}
+.projects .project-content .project-lable{
+    position: absolute;
+    top: 0px;
+}

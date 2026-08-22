@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.parent{
+    background-color: blueviolet;
+    width: 90%;
+    height: 300px;
+    margin: 0px auto;
+    display: flex;
+}
+
+.box-1 , .box-2 , .box-4 , .box-5 , .box-6 , .box-7 , .box-8{
+    height: 100px;
+    width: 100px;
+    border: 1px solid yellow;
+}
+
+.box-3{
+    width:100px;
+    flex-shrink: 10;
+    border: 1px solid yellow;
+    height: 100px;
+}
+

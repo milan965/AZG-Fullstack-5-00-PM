@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+       .hello , .mahadev , .para{
+        color: red;
+       }
+
+       h1:hover{
+        color: yellow;
+       }
+
+       a[target]{
+        color: rgb(0, 255, 34);
+       }
+
+
+       
+
+       li:nth-child(even){
+        color: rgb(255, 0, 204);
+       }
+
+            /* a:visited {
+        color: rgb(23, 128, 0);
+        }
+
+        a:hover {
+        color: yellow;
+        }
+
+        a:active {
+        color: red;
+        } */
+
+        a:visited{
+            color: green;
+        }
+
+        a:hover{
+            color: yellow;
+        }
+
+        .about:hover{
+            color: skyblue;
+        }
+
+
+        .box{
+            background-color: red;
+            height: 50px;
+            width: 50px;
+        }
+
+        .box::after{
+            content: "hiii";
+            border: 1px solid black;
+        }
+       
+    </style>
+</head>
+<body>
+    
+
+    <h1 class="hello">Hello</h1>
+    <h2 class="mahadev">Mahadev</h2>
+    <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut repellat quaerat! Molestiae placeat incidunt at perspiciatis voluptatem velit officia accusamus vel harum deserunt sint, recusandae non nostrum nemo animi.</p>
+
+
+    <!-- <a href="https://www.google.com" target="_blank">Home</a> -->
+
+
+   <a href="#">Home</a>
+
+   <a href="https://www.google.com">Google</a>
+
+
+
+
+    <ul>
+        <li>Home</li>
+        <li class="about">About</li>
+        <li>Product</li>
+        <li>Services</li>
+        <li>Contact</li>
+
+
+
+
+    </ul>
+
+
+
+
+
+    <div class="box"></div>
+
+
+</body>
+</html>

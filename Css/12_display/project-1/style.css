@@ -1,0 +1,44 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.main{
+    width:100%;
+    display: flex;
+}
+
+.sidebar{
+    width:25%;
+    height: 100vh;
+    background-color: #f44336;
+}
+
+.sidebar .cmp-name{
+    padding: 100px 35px;
+}
+
+.sidebar .menu ul{
+    list-style-type:none;
+}
+
+.sidebar .menu ul li{
+    padding: 12px 35px;
+}
+.sidebar .menu ul li a{
+   font-size: 22px;
+   font-weight: 600;
+}
+.main-content{
+    width: 75%;
+    height:100vh;
+    padding: 70px;
+}
+.main-content .title h1{
+    margin-top: 25px;
+    font-size: 70px;
+}

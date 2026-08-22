@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,
+initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS transition</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            margin-bottom: 12px;
+            background-color: orange;
+            transition-property: width;
+            transition-duration: 2s;
+        }
+
+        .box1 {
+            transition-timing-function: ease;
+        }
+
+        .box2 {
+            transition-timing-function: linear;
+        }
+
+        .box3 {
+            transition-timing-function: ease-in;
+        }
+
+        .box4 {
+            transition-timing-function: ease-out;
+
+        }
+
+        .box5 {
+            transition-timing-function: ease-in-out;
+        }
+
+        .box6 {
+            transition-timing-function: step-start;
+        }
+
+        .box7 {
+            transition-timing-function: steps(5,start);
+        }
+
+        .box8 {
+            transition-timing-function: steps(5, end);
+        }
+
+        .box:hover {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Hover over the element below</p>
+
+    <div class="box box1">Ease</div>
+    <div class="box box2">Linear</div>
+    <div class="box box3">Ease-In</div>
+    <div class="box box4">Ease-Out</div>
+    <div class="box box5">Ease-In-Out</div>
+    <div class="box box6">Step-start</div>
+    <div class="box box7">Step-end</div>
+    <div class="box box8">Steps(5,end)</div>
+</body>
+
+</html>

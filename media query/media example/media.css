@@ -1,0 +1,104 @@
+
+/* sm */
+@media(max-width:576px){
+    .col-sm-1{
+        width: 8.33%;
+        padding: 10px 15px;
+    }
+    .col-sm-2{
+        width: 16.66%;
+        padding: 10px 15px;
+    }
+     .col-sm-3{
+        width: 25%;
+        padding: 10px 15px;
+    }
+    .col-sm-4{
+        width: 33.33%;
+        padding: 10px 15px;
+    }
+    .col-sm-5{
+        width: 41.66%;
+        padding: 10px 15px;
+    }
+     .col-sm-6{
+        width: 50%;
+        padding: 10px 15px;
+    }
+     .col-sm-7{
+        width: 58.33%;
+        padding: 10px 15px;
+    }
+     .col-sm-8{
+        width: 66.66%;
+        padding: 10px 15px;
+    }
+     .col-sm-9{
+        width: 75%;
+        padding: 10px 15px;
+    }
+     .col-sm-10{
+        width: 83.33%;
+        padding: 10px 15px;
+    }
+     .col-sm-11{
+        width: 91.66%;
+        padding: 10px 15px;
+    }
+    .col-sm-12{
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .logo{
+        background-color: coral;
+        margin: 10px 0px;
+    }
+
+    .menu{
+        background-color: cadetblue;
+        margin: 10px 0px;
+    }
+
+     .icon{
+        background-color: rgb(83, 51, 77);
+        margin: 10px 0px;
+    }
+}
+
+/* medium devices md*/
+@media(min-width:577px) and (max-width:767px){
+    .col-md-12{
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .logo{
+        background-color: rgb(212, 216, 166);
+        margin: 10px 0px;
+    }
+
+    .menu{
+        background-color: rgb(19, 59, 61);
+        margin: 10px 0px;
+    }
+
+     .icon{
+        background-color: rgb(83, 51, 52);
+        margin: 10px 0px;
+    }
+}
+
+/* large devices lg */
+@media(min-width:768px) and (max-width:992px){
+     .col-lg-1{
+
+     }
+}
+
+/* extra large devices xl */
+@media(min-width:993px){
+     .col-xl-1{
+        
+     }
+}

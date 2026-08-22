@@ -1,0 +1,161 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+header{
+    background-color:#f44336;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+ul{
+    list-style-type: none;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-1{
+    width: 8.33%;
+    padding: 0px 15px;
+}
+.col-2{
+    width: 16.66%;
+    padding: 0px 15px;
+}
+.col-3{
+    width: 25%;
+    padding: 0px 15px;
+}
+.col-4{
+    width: 33.33%;
+    padding: 0px 15px;
+}
+.col-5{
+    width: 41.66%;
+    padding: 0px 15px;
+}
+.col-6{
+    width: 50%;
+    padding: 0px 15px;
+}
+.col-7{
+    width: 58.33%;
+    padding: 0px 15px;
+}
+.col-8{
+    width: 66.66%;
+    padding: 0px 15px;
+}
+.col-9{
+    width: 75%;
+    padding: 0px 15px;
+}
+.col-10{
+    width: 83.33%;
+    padding: 0px 15px;
+}
+.col-11{
+    width: 91.66%;
+    padding: 0px 15px;
+}
+.col-12{
+    width: 100%;
+    padding: 0px 15px;
+}
+
+.align-item-center{
+    align-items: center;
+}
+
+header{
+    box-shadow: 3px 3px 10px black;
+}
+header .menu ul{
+    display: flex;
+}
+header .menu ul li{
+    /* margin: 0px 25px; */
+}
+header .menu ul li a{
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 30px;
+}
+header .menu ul li a:hover{
+    background-color: #fff;
+    color: black;
+}
+
+
+/* hero */
+.hero{
+    padding: 100px 0px;
+    background-color: #74b56b;
+}
+.hero .hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero .hero-content h1{
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 16px;
+}
+.hero .hero-content p{
+    margin: 24px 0px;
+    font-size: 24px;
+}
+.hero .hero-content a{
+    background-color: #000;
+    color: #fff;
+    width: 200px;
+    padding: 20px 54px;
+    font-size: 18px;
+}
+
+
+.post-1{
+    padding: 64px 0px;
+}
+
+.post-1  .post-content h2{
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.post-1  .post-content h5{
+    margin: 32px 0px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.post-1  .post-content p{
+    font-size: 18px;
+    color:#757575;
+     margin: 32px 0px;
+}
+
+.post-1 .post-image{
+    display: flex;
+    justify-content: center;
+}
+
+.post-1 .post-image i{
+    font-size: 200px;
+    color: #f44336;
+}
+
+

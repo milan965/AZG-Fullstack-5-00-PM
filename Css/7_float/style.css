@@ -1,0 +1,29 @@
+.main{
+    width: 100%;
+    background-color: yellow;
+    padding: 20px;
+}
+
+.box-1{
+    width: 48%;
+    height: 100px;
+    background-color: blueviolet;
+    float: left;
+}
+
+.box-2{
+    width: 48%;
+    height: 100px;
+    background-color: rgb(43, 177, 226);
+    float: left;
+}
+
+.clear{
+    clear: both;
+}
+
+.box-3{
+    background-color: cadetblue;
+    height: 100px;
+    width: 200px;
+}

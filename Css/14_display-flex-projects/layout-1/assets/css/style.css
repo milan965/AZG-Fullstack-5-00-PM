@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: "Roboto", sans-serif;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1d1c1c;
+    letter-spacing: 1px;
+}
+
+.container{
+    width:90%;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-1{
+    width:8.33%;
+    padding: 0px 15px;
+}
+.col-2{
+    width:16.66%;
+    padding: 0px 15px;
+}
+.col-3{
+    width:25%;
+    padding: 0px 15px;
+}
+.col-4{
+    width:33.33%;
+    padding: 0px 15px;
+}
+.col-5{
+    width:41.66%;
+    padding: 0px 15px;
+}
+.col-6{
+    width:50%;
+    padding: 0px 15px;
+}
+.col-7{
+    width:58.33%;
+    padding: 0px 15px;
+}
+.col-8{
+    width:66.66%;
+    padding: 0px 15px;
+}
+.col-9{
+    width:75%;
+    padding: 0px 15px;
+}
+.col-10{
+    width:83.33%;
+    padding: 0px 15px;
+}
+.col-11{
+    width:91.66%;
+    padding: 0px 15px;
+}
+.col-12{
+    width:100%;
+    padding: 0px 15px;
+}
+
+.align-items-center{
+    align-items: center;
+}
+.btn{
+    padding:10px 20px;
+    border:none;
+    border-radius: 25px;
+    font-size: 18px;
+    background:transparent;
+    border: 2px solid white;
+    color: #ffffff;
+}
+header{
+    /* background-color: #88ff00; */
+    padding: 20px 0;
+}
+
+header .menu{
+    display: flex;
+    align-items: center;
+}
+header .menu ul{
+    display:flex;
+    margin-left: 35px;
+}
+
+header .menu ul li{
+    margin-right: 20px;
+}
+
+header .signin ul{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .signin ul li{
+    margin: 0px 20px;
+}
+
+header .signin ul li a .signinbtn{
+    padding:10px 20px;
+    background-color: red;
+    border:none;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 1px solid #1d1c1c;
+
+}
+
+header .signin ul li a .joinbtn{
+    padding:10px 20px;
+    background-color: red;
+    border:none;
+    background-color: #000000;
+    border-radius: 20px;
+    border: 1px solid #1d1c1c;
+    color: #ffffff;
+}
+
+/* order start */
+
+.order-section{
+    background-color:#32462f;
+    padding: 34px 0px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.order{
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+}
+
+
+/* grads start */
+.grads{
+    margin:32px 0px;
+    background-color: #006242;
+}
+.grads-content{
+    width: 100%;
+    padding: 27px 0px;
+}
+.grads-content h2{
+    text-align: center;
+    color:#ffffff;
+    margin-bottom: 24px;
+}
+.grads-content p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color:#ffffff;
+}
+.grads-btn{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 32px;
+}

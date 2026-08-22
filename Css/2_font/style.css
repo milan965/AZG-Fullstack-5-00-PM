@@ -1,0 +1,23 @@
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+h1{
+    font-size: 50px;
+}
+
+p{
+    font-weight: 400;
+    color:rgb(100, 5, 25);
+    text-transform: lowercase;
+    line-height: 1.2;
+    letter-spacing: 5;
+    word-spacing: 10px;
+    text-indent: 50px;
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    text-align: end;
+}
+
+a{
+    text-decoration: line-through;
+}

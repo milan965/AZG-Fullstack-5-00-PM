@@ -1,0 +1,19 @@
+*{
+    color: rgb(136, 193, 45);
+}
+
+/* #ex1{
+    color: red;
+}
+
+#ex2{
+    color: burlywood;
+}
+
+.para{
+    color: gray;
+} */
+
+.parent  p{
+    color: yellow;
+}

@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    margin: 0px auto;
+}
+.row{
+    padding: 10px 0px;
+    background-color: burlywood;
+}
+
+.col-1{
+    width: 8.33%;
+    float: left;
+    border: 1px solid black;
+}
+.col-2{
+    width: 16.66%;
+    float: left;
+    border: 1px solid black;
+}
+.col-3{
+    width: 25%;
+    float: left;
+    border: 1px solid black;
+}
+.col-4{
+    width: 33.33%;
+    float: left;
+    border: 1px solid black;
+}
+.col-5{
+    width: 41.66%;
+    float: left;
+    border: 1px solid black;
+}
+.col-6{
+    width: 50%;
+    float: left;
+    border: 1px solid black;
+}
+.clear{
+    clear: both;
+}
