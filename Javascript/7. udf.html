@@ -6,6 +6,128 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello udf</h1>
+    
+    <script>
+            // udf function
+            //1. no return no argumanet (simple)
+            // function sum(){
+            //     let a=10,b=5;
+            //     document.write(`Ans :- ${a+b}`)
+            //     document.write("<br/>")
+            // }
+            // sum();
+            // sum();
+
+            //2. no return with argument
+            // function sum(a,b,c){
+            //     document.write(`Ans :- ${a+b+c}`)
+            //     document.write("<br/>")
+            // }
+            // sum(10,2,6);
+            // sum(9,8,7);
+
+            //3. return with no argumanet
+            // function sum(){
+            //     let a=10,b=55;
+            //     return a + b;
+            // }
+            // let ans = sum();
+            // document.write(`Ans :- ${ans}`)
+
+            // 4. return with argument
+            // function mul(x,y){
+            //     return x * y;
+            // }
+            // let ans = mul(10,5);
+            // document.write(`Ans :- ${ans}`)
+
+
+            //local variable
+            // function hello(){
+            //     let x=10;  //local variable
+            //      console.log(x);
+            // }
+            // hello();
+
+
+            //Anonymous Function
+
+            // const checkAge = function(){
+            //     let age=17;
+            //     if(age >= 18){
+            //         document.write(`<h1>You can vote</h1>`);
+            //     }else{
+            //         document.write(`<h1>You can not vote</h1>`);
+            //     }
+            // }
+            // checkAge();
+
+            //Immediately Invoked Function Expression (IIFE)
+
+            // (function(){
+            //     console.log("hello");
+                
+            // })();
+
+            //argument with no return 
+            (function(name){
+                document.write(`<h1>You name :- ${name}</h1>`)
+            })("alice")
+
+            //return with no argument
+            // const res = (function(){
+            //     let x=5,y=6;
+            //     return x + y;
+            // })();
+            // console.log(res);
+
+            // return with argument
+
+            // const res = (function(r){
+            //     return 3.14 * r * r;
+            // })(4)
+            // console.log(`circle radius :- ${res}`);
+
+
+            // Constructor Function
+            // const Person = function(name,age){
+            //     this.name = name
+            //     this.age = age;
+            // }
+            // let user = new Person("Jay",21);
+            // console.log(user.name);
+            // console.log(user.age);
+
+            
+            
+            
+
+
+            let college = function(name,clgname="abc college"){
+                console.log(`name :- ${name} , college name :- ${clgname}`);
+                
+            }
+
+            college("jay");
+            college("mitul");
+            college("chirag");
+            college("milan","sutex");
+            college("hardik","p.p savani");
+
+
+
+            
+
+           
+            
+
+
+            
+
+
+    </script>
+
+
+
 </body>
 </html>
