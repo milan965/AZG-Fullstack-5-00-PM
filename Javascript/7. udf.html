@@ -108,11 +108,27 @@
                 
             }
 
-            college("jay");
-            college("mitul");
-            college("chirag");
-            college("milan","sutex");
-            college("hardik","p.p savani");
+            // college("jay");
+            // college("mitul");
+            // college("chirag");
+            // college("milan","sutex");
+            // college("hardik","p.p savani");
+
+
+
+            // Recursion
+
+
+           function sum(no){
+                if(no === 0){
+                    return 0;
+                }
+
+                return no + sum(no-1);
+           }
+           let ans = sum(5);
+           console.log(ans);
+           
 
 
 
