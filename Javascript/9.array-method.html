@@ -108,13 +108,78 @@
         // })
 
 
-        let no = [1,2,3,4,5];
-       let ans =  no.map(function(p,i){
-           return p * p
-        })
-        console.log(ans);
+    //     let no = [1,2,3,4,5];
+    //    let ans =  no.map(function(p,i){
+    //        return p * p
+    //     })
+    //     console.log(ans);
         
         //[1,4,9,16,25]
+
+
+
+        //filter
+
+        // let city = ["vapi","surat","valsad","amareli"];
+
+        // let ans = city.filter((value)=>{
+        //     return value !== "amareli" && value !== "surat"
+        // })
+
+        // console.log(ans);
+
+        // let numbers = [1,2,3,4,5];
+
+        // let ans = numbers.filter(function(value){
+        //         return value % 2 == 1
+        // })
+        // console.log(ans);
+        
+        let numbers = [1,2,3,4,5];
+
+        // let ans = numbers.find(function(value){
+        //     return value === 10
+        // })
+
+        // console.log(ans);
+
+
+
+        // let ans = numbers.some(function(value){
+        //     return value > 100
+                //    10 > 100  false
+                //    5 > 100  false
+                //    10 > 100 false
+                //    15 > 100 false
+                //    20 > 100
+        // })
+
+        // console.log(ans);
+
+        // let ans = numbers.every(function(value){
+        //     return value > 10;
+        // })
+
+        // console.log(ans);
+
+        // let sum = 0;
+        // for(i=0;i<numbers.length;i++){
+        //     sum = sum + numbers[i];
+        // }
+        // console.log(sum);
+
+        // reduce
+
+        let ans = numbers.reduce(function(value,total){
+            return value + total
+        },0)
+
+        console.log(ans);
+        
+        
+        
+        
+        
         
         
 
