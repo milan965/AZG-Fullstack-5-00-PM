@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="name">Name :- </h2>
+    <h2 id="age">Age :- </h2>
+    <h2 id="course">Age :- </h2>
+
+
+    
+    <script>
+        
+
+        // let person = {
+        //     name : 'jay',
+        //     age : 21,
+        //     city : "surat",
+        //     course : ["html","css","bootstrap","media query"],
+        //     sum:function(){
+        //         let a=10,b=5;
+        //         return a + b;
+        //     },
+
+        //     arr:function(){
+        //         return [10,20,30,40,60]
+        //     },
+
+        //     address : {
+        //         country : 'india',
+        //         state : 'gujarat',
+        //         city : "surat",
+        //         area : "kamrej",
+        //         village : "kholavad",
+        //         socname : "opera royal",
+        //         milan : {
+        //             name : 'milan',
+        //             age : 29,
+        //             role : 'developer'
+        //         }
+        //     }
+            
+        // }
+
+        //modify property
+        // person.name = "ajay";
+
+        //add property
+        // person.country = "india";
+
+
+        //remove property
+
+        // delete person.city
+
+        // console.log(person);
+
+        // let ans = person.sum();
+
+        // console.log(ans);
+
+        // console.log(person.arr());
+
+
+        // console.log(person.address.country);
+        // console.log(person.address.state);
+        // console.log(person.address.city);
+
+        // console.log(person.address.milan.name);
+        
+        
+        
+        
+        
+        
+        
+
+        // document.getElementById('name').innerHTML = `Name :- ${person["name"]}`;
+        // document.getElementById('age').innerHTML = `Age :- ${person['age']}`;
+        // document.getElementById('course').innerHTML = `Age :- ${person.course}`;
+
+
+
+        //array of objects
+
+        // let students = [
+        //     {
+        //         id : 1,
+        //         name : 'jay',
+        //         email : 'jay@gmail.com',
+        //         age : 21
+        //     },
+        //     {
+        //         id : 2,
+        //         name : 'ajay',
+        //         email : 'ajay@gmail.com',
+        //         age : 22
+        //     },
+        //     {
+        //         id : 3,
+        //         name : 'keval',
+        //         email : 'keval@gmail.com',
+        //         age : 20
+        //     }
+        // ]
+
+
+        // console.log(students[0].name);
+        // console.log(students[2].age);
+
+
+        // let person = {
+        //     name : "jay",
+        //     age : 34,
+        //     city : "surat"
+        // }
+
+        // for(let k in person){
+        //     console.log(`${k} : ${person[k]}`);
+            
+        // }
+
+        // console.log(Object.keys(person));
+
+
+        // console.log(Object.values(person));
+
+
+        // console.log(Object.entries(person));
+
+        // const {name , age , city} = person;
+
+        // console.log(city);
+
+
+        // let a=[10,30,40];
+        // let b=[50,60,70];
+
+        // let c = [...a,...b];
+        // console.log(c);
+        
+
+
+        // let obj = {
+        //     name : 'jay',
+        //     age : 24
+        // }
+
+        // let address = {
+        //     coutry : 'india',
+        //     state : 'gujarat',
+        //     city : 'surat'
+        // }
+        
+
+        // let res = {...obj,...address}
+
+        // console.log(res);
+
+
+
+        // Object Constructor
+        // let student = new Object();
+        // student.name = "jay";
+
+        // console.log(student);
+
+        let product = {
+            name : 'laptop',
+            price : 50000,
+            brand : 'dell',
+            qty : 2,
+            color : ["red","blue","white"],
+
+            displayInfo:function(){
+                console.log(`name :- ${this.name} , price : ${this.price} , brand : ${this.brand}`);
+                
+            },
+
+            totalBill:function(){
+                console.log(`Total :- ${this.price * this.qty}`);
+                
+            }
+        }
+
+
+        product.displayInfo();
+        product.totalBill();
+       console.log(product.color);
+       
+                
+        
+        
+        
+        
+
+
+        
+
+        
+
+    </script>
+
+</body>
+</html>
