@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        // class Student{
+        //     constructor(uname,age){
+        //        this.name = uname;
+        //        this.age = age;
+                
+        //     }
+
+        //     details(){
+        //         console.log(`name is ${this.name} age is :- ${this.age}`);
+                
+        //     }
+        // }
+
+        // let st = new Student("jay",21);
+        // st.details();
+
+
+
+        class Bank{
+            constructor(uname,pin,balance){
+                this.name = uname;
+                this.pin = pin;
+                this.balance = balance;
+            }
+
+
+            deposite(amt){
+                this.balance += amt
+                console.log(`deposite successfully add`);
+            }
+
+            withdraw(amt){
+                this.balance -= amt
+                console.log(`successfully Withdraw`);
+            }
+
+            display(){
+                console.log(`Your Final Balance :- ${this.balance}`);
+            }
+        }
+
+
+        let bank = new Bank("jay",1111,1000);
+        bank.deposite(100);
+        bank.withdraw(200);
+        bank.display();
+
+
+
+    </script>
+
+</body>
+</html>
