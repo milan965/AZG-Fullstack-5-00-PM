@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // class Animal{
+        //     eat(){
+        //         console.log(`animal is eating`);
+        //     }
+        // }
+        // class Dog extends Animal{
+        //     bark(){
+        //         console.log(`dog is bark`);
+                
+        //     }
+        // }
+
+        // class Puppy extends Animal{
+        //     play(){
+        //         console.log(`puppy is running`);
+                
+        //     }
+        // }
+
+        // let  d = new Dog;
+        // d.eat();
+        // d.bark();
+        // let p = new Puppy;
+        // p.eat();
+        // p.play();
+
+
+
+
+        //super keyword
+        // class Person{
+        //     constructor(name){
+        //         this.name = name
+        //     }
+        // }
+
+        // class Student extends Person{
+        //     constructor(name,course){
+        //         super(name);
+        //         this.course = course
+        //     }
+        // }
+
+
+        // let st = new Student("jay","web development")
+        // console.log(st.name);
+        // console.log(st.course);
+
+        // super keyword second example
+
+        class Animal{
+            sound(){
+                console.log("Animal Sound");
+            }
+        }
+
+        class Dog extends Animal{
+            sound(){
+                super.sound()
+                console.log(`dog is sound`);
+                
+            }
+        }
+
+        let d = new Dog();
+        d.sound();
+        
+
+
+
+    </script>
+
+</body>
+</html>
