@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        // class Animal{
+        //     sound(){
+        //         console.log("Generic Animal Sound");
+        //     }
+        // }
+
+
+        // class Dog extends Animal{
+        //     sound(){
+        //         console.log("Woof! Woof!");
+        //     }
+        // }
+
+        // class Arithmatic extends Dog{
+        //     sound(){
+        //         let a=10,b=5;
+        //         console.log(`ans :- ${a+b}`);
+                
+        //     }
+        // }
+
+        // let animal = [new Animal(),new Dog(),new Arithmatic()];
+
+        // animal.map(val => val.sound())
+
+
+
+        // class Car{
+        //     start(){
+        //         this.#checkEngine();
+        //         console.log(`car start`);
+                
+        //     }
+
+        //     #checkEngine(){  //abstract method
+        //         console.log(`check Engine`);
+        //     }
+        // }
+        
+        // let car = new Car();
+        // car.start();
+
+
+        class Bank{
+
+            #balance = 5000;
+
+            checkBalance(){
+                return this.#balance;
+            }
+
+            withdorw(amt){
+                if(amt <= this.#balance){
+                    this.#balance-=amt
+                    console.log(`withdraw successfuly`);
+                    console.log(`total balance :- ${this.checkBalance()}`);
+                    
+                    
+                }else{
+                    console.log("unsufficent balance");
+                    
+                }
+            }
+            
+
+        }
+
+
+        let b = new Bank()
+        b.withdorw(5001);
+        b.checkBalance();
+
+
+
+   
+        
+
+    </script>
+
+</body>
+</html>
