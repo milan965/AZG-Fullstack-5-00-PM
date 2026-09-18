@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // task 1
+        // class Shape{
+        //     calculateArea(){}
+        // }
+
+        // class Circle extends Shape{
+        //     constructor(radius){
+        //         super();
+        //         this.radius = radius;
+        //     }
+
+        //     calculateArea(){
+        //         return 3.14 * this.radius * this.radius;
+        //     }
+
+        // }
+
+        // class Rectangle extends Shape{
+        //     constructor(width,height){
+        //         super();
+        //         this.width = width;
+        //         this.height = height
+        //     }
+
+        //     calculateArea(){
+        //         return this.width * this.height;
+        //     }
+
+        // }
+
+
+        // let cir = new Circle(5);
+        // console.log(`circle area :- ${cir.calculateArea()}`);
+
+        // let ract = new Rectangle(3,4);
+        // console.log(`ractangle Area :- ${ract.calculateArea()}`);
+
+
+        // task 2
+        // class BankAccount{
+        //     constructor(accno,bal){
+        //         this.accno = accno;
+        //         this.bal = bal;
+        //     }
+
+        //     widthdraw(amt){
+        //         if(this.bal > amt){
+        //             this.bal -= amt
+        //             console.log(`withdraw successfully`);
+        //         }else{
+        //             console.log(`Unsufficent balance`); 
+        //         }
+        //     }
+
+        //     deposite(amt){
+        //         this.bal += amt
+        //         console.log(`deposite successfully`);
+        //     }
+
+        //     totalBalance(){
+        //         console.log(`your total balance :- ${this.bal}`);
+                
+        //     }
+        // }
+
+        // let b = new BankAccount(1111,1000);
+        // b.widthdraw(100);
+        // b.totalBalance();
+
+        // b.deposite(500);
+        // b.totalBalance();
+
+
+
+        // task 4
+
+        class University{
+            constructor(name){
+                this.name = name;
+                this.departments = []
+            }
+
+            addDepartments(dep){
+                this.departments.push(dep);
+                console.log(`department successfully add`);
+                
+            }
+
+            viewDepartments(){
+                console.log(`----view departments----`);
+                
+                this.departments.forEach((value)=>{
+                    console.log(value);
+                    
+                })
+            }
+
+            removeDepartments(dept){
+                let ans = this.departments.filter((value)=>{
+                    return value != dept
+                })
+                
+                this.departments = ans;
+                console.log(`department successfully remove`);
+                
+            }
+        }
+
+        let uni = new University("ABC University");
+        uni.addDepartments("Science");
+        uni.addDepartments("Computer");
+        uni.addDepartments("Commerce");
+
+        uni.viewDepartments();
+
+        uni.addDepartments("Arts");
+        uni.viewDepartments();
+
+        uni.removeDepartments("Science");
+        uni.viewDepartments();
+
+        uni.removeDepartments("Commerce");
+        uni.viewDepartments();
+        
+
+        
+
+    </script>
+
+</body>
+</html>
