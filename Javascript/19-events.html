@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h2 id="cnt"></h2>
+
+    <button onmouseup="demo()">Click</button>
+
+    <div onmousemove="mouseOver()" style="border: 1px solid black;">
+        hello
+    </div>
+
+    <hr>
+
+    <input onkeyup="pressKey()" type="text">
+
+    <script>
+
+
+
+        let no = 0;
+
+        const pressKey = () => {
+             no = no + 1;
+            document.getElementById(`cnt`).innerHTML = `Count :- ${no}`;
+        }
+
+        const mouseOver = () => { 
+            no = no + 1;
+            document.getElementById(`cnt`).innerHTML = no;
+        }
+
+        const demo = () => {
+            alert("button click");
+        }
+    </script>
+
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h2 id="cnt"></h2>
+
+    <button onmouseup="demo()">Click</button>
+
+    <div onmousemove="mouseOver()" style="border: 1px solid black;">
+        hello
+    </div>
+
+    <hr>
+
+    <input onkeyup="pressKey()" type="text">
+
+    <script>
+
+
+
+        let no = 0;
+
+        const pressKey = () => {
+             no = no + 1;
+            document.getElementById(`cnt`).innerHTML = `Count :- ${no}`;
+        }
+
+        const mouseOver = () => { 
+            no = no + 1;
+            document.getElementById(`cnt`).innerHTML = no;
+        }
+
+        const demo = () => {
+            alert("button click");
+        }
+    </script>
+
+    
+
+
+</body>
+</html>

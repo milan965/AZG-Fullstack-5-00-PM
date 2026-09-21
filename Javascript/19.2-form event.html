@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form onsubmit="submitData()">
+        <p>
+            <label for="name">Name :- </label>
+            <input  onblur="nameChange()" type="text" placeholder="Enter name">
+        </p>
+
+        <p>
+            <select name="" id="" onchange="cityName()">
+                <option value="">---select city---</option>
+                <option value="surat">surat</option>
+                <option value="vaapi">Vaapi</option>
+            </select>
+        </p>
+        
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+    
+
+    <script>
+
+        const cityName = () => {
+            alert("hii")
+        }
+
+        const submitData = () => {
+            alert("hiii")
+        }
+
+        const nameChange = () => {
+           console.log("focus enable");   
+        }
+        
+    </script>
+
+</body>
+</html>

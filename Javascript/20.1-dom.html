@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <p id="msg">Hello</p> -->
+
+    <p class="course">HTML</p>
+    <p class="course">Css</p>
+    <p class="course">Javascript</p>
+
+
+    <button onclick="clickFun()">Click</button>
+
+    <script>
+       
+
+       const clickFun = () => {
+            //  let name = document.getElementById('msg');
+            // name.innerHTML = "<h1>How r you</h1>";
+            // name.style.color = "red";
+            // name.style.fontSize = "40px";
+
+            let courses = document.getElementsByClassName('course');
+            
+
+           
+            for(i=0;i<courses.length;i++){
+                
+                if(i==1){
+                    courses[i].innerHTML = "TailwindCss"
+                    courses[i].style.color="red";
+                }else{
+                     courses[i].style.color="green";
+                }
+                
+            }
+            
+            
+
+
+       }
+
+    </script>
+
+</body>
+</html>
