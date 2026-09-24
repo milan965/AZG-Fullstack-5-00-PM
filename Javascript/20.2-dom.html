@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <div id="parent">
+
+    </div> -->
+
+    <input id="task" type="text" placeholder="add items">
+    <button onclick="add()">Add</button>
+
+    <hr>
+
+    <ul id="list"></ul>
+
+    <button onclick="deleteItem()">Delete</button>
+
+    <script>
+
+        const add = () => {
+            let task = document.getElementById('task').value;
+
+            if(task === ""){
+                alert("task is blank")
+                return false;
+            }
+            
+            let li = document.createElement('li');
+
+
+            let list = document.getElementById('list');
+            let button = document.createElement('button')
+            button.innerHTML = "Delete Item";
+            li.innerHTML = task
+            list.appendChild(li)
+            list.appendChild(button);
+            alert("Item add");
+            document.getElementById('task').value="";
+
+            
+        }
+
+        const deleteItem = () => {
+            document.getElementById('list').remove();
+        }
+
+            // let add = document.getElementById('parent');
+            // let p = document.createElement("p");
+            // p.innerHTML = "hello";
+            // p.style.color="red";
+
+            // add.appendChild(p);
+
+    </script>
+
+</body>
+</html>
