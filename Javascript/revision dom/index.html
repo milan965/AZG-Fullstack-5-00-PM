@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <h1 id="msg">Hello</h1> -->
+     <!-- <p>Hello</p>
+     <p>How r u</p>
+     <p>HTML</p> -->
+
+     <h2 class="message">HTML</h2>
+     <h2 class="message">CSS</h2>
+     <h2 class="message">Bootstrap</h2>
+
+    <button id="btn" onclick="clickButton()">Click</button>
+
+    <script>
+       
+
+
+        //create button
+        //let btn = document.getElementById('btn');
+        // btn.addEventListener('click',()=>{
+        //     alert("hiii")
+        // })
+
+        const clickButton = () => {
+            //  let msg = document.getElementById('msg');
+            //  msg.innerHTML = "How r u"
+
+            // let p = document.querySelectorAll("p");
+            // p[1].innerHTML = "add zero";
+            // p[1].style.color="blue"
+
+            // for(let i=0;i<p.length;i++){
+            //     if(i%2 == 0){
+            //         p[i].style.color = "red"
+            //     }else{
+            //         p[i].style.color = "green"
+            //     }
+            // }
+
+
+            let h2 = document.querySelector('.message');
+            h2.innerHTML = "JS"
+            // h2[1].innerHTML = "React js"
+            // h2[1].style.color="red"
+            // h2[2].innerHTML = "Node js"
+
+            
+            
+        }
+
+    </script>
+
+</body>
+</html>
