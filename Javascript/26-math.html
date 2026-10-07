@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">Click</button>
+
+    <script>
+        let cnt=1
+        let xyz = setInterval(()=>{
+            console.log(`hello :- ${cnt}`);
+            cnt++;
+        },1000)
+
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click',function(){
+             clearInterval(xyz)
+        })
+
+       
+
+        // let time  = setTimeout(()=>{
+        //     alert("hiii")
+        // },5000);
+        // clearTimeout(time)
+
+        // const save = () => {
+        //     setTimeout(()=>{
+        //         alert("hiii")
+        //     },3000);
+        // }
+
+        // const greet = () => {
+        //     alert("hii")
+        // }
+
+        // setTimeout(greet,2000)
+
+        // console.log(Math.pow(2,3));
+
+        // console.log(Math.max(5,2,8,1,4));
+
+        // let random = Math.floor(Math.random() * 10) + 1;
+        // console.log(random);
+
+        let date = new Date();
+        
+        date.setHours(18)
+
+        console.log(date);
+        
+        
+        
+        
+
+
+    </script>
+
+</body>
+</html>
