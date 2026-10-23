@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table align="center" border="1" width="90%">
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Tags</th>
+            <th>Dimensions</th>
+            <th>Reviews</th>
+        </tr>
+        <tbody id="products"></tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+
+        $.ajax({
+            url : 'https://dummyjson.com/products',
+            method : 'get',
+            success:function(res){
+                
+                let allproducts = res.products;
+               
+
+                let data = "";
+                allproducts.map((val)=>{
+                    data += `
+                                <tr>
+                                    <td>${val.id}</td>
+                                    <td>${val.title}</td>
+                                    <td>${val.description}</td>
+                                    <td>${val.category}</td>
+                                    <td>${val.price}</td>
+                                    <td>${val.tags}</td>
+                                    <td>
+                                       width :-  ${val.dimensions.width}
+                                       height :- ${val.dimensions.height}
+                                       depth :- ${val.dimensions.depth}
+                                    </td>
+                                    <td>
+                                        <img src=${val.images[1]}/>
+                                    </td>
+
+                                    <td>
+                                        <table border="1">
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Comment</th>
+                                                <th>Name</th>
+                                                <th>Rating</th>
+                                            </tr>`
+                                                let sum = 0;
+                                                
+                                                let avg = 0
+                                                
+                                                
+                                               val.reviews.map((r,i)=>{
+                                                    sum = sum + r.rating
+                                                    avg = val.reviews.length;
+                                                    
+                                                    
+                                                    
+                                                    data += `
+                                                                <tr>
+                                                                     <td>${++i}</td>
+                                                                    <td>${r.comment}</td>
+                                                                    <td>${r.reviewerName}</td>
+                                                                    <td>${r.rating}</td>
+                                                                    
+                                                                </tr>
+                                                            `
+                                               })
+
+                                               data += `
+                                                            <tr>
+                                                                <td colspan="4">Total Rating :- ${sum}</td>
+                                                            </tr>
+                                                             <tr>
+                                                                <td colspan="4">Avg Rating :- ${sum / avg}</td>
+                                                            </tr>
+                                                        `                                                        
+
+                                   data +=` </table>
+                                    </td>
+
+
+                                    
+                                </tr>
+                            `
+                })
+                document.getElementById('products').innerHTML = data
+                
+                
+            }
+        })
+
+    </script>
+
+
+</body>
+</html>

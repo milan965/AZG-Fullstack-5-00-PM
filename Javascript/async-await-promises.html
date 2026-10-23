@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        // // console.log("hello");
+        // // setTimeout(()=>{
+        // //     console.log("time out");
+            
+        // // },2000)
+        // // console.log("how r u");
+
+        // console.log("1");
+        // setTimeout(()=>{
+        //     console.log("2");
+        // },3000)
+        // console.log("3");
+
+        //calbacks
+
+        // function ans(a,b,callback){
+        //     let c = a + b;
+        //     console.log(`sum :- ${c}`);
+
+        //     callback()
+            
+        // }
+       
+        // function sum(){
+        //     console.log("sum is successfully");
+            
+        // }
+
+        // ans(10,2,sum)
+
+
+        // setTimeout(()=>{
+        //     console.log("2 seconds");
+            
+        // },2000)
+
+        // function login(callback){
+
+
+        //     setTimeout(()=>{
+        //         console.log("user login");
+        //          callback()
+        //     },1000)
+
+
+           
+
+        // }
+
+        // function getProfile(cb){
+
+        //     setTimeout(()=>{
+        //         console.log(`get profile`);
+        //          cb();
+                
+        //     },1000)
+
+           
+
+        // }
+
+        // function getOrders(cb){
+        //     setTimeout(()=>{
+        //         console.log(`get Orders`);
+        //         cb();
+                
+        //     },1000)
+            
+        // }
+
+        // function payment(cb){
+        //     setTimeout(()=>{
+        //         console.log(`payment successfully`);
+        //          cb();
+                
+        //     },1000)
+           
+        // }
+
+
+
+
+        // login(function(){
+        //     getProfile(function(){
+        //         getOrders(function(){
+        //             payment(function(){
+        //                 console.log("proccess completed");
+        //             })
+        //         })
+        //     })
+        // })
+
+
+        // let p = new Promise((res,rej)=>{
+
+        //     let success = false;
+
+        //     if(success){
+        //         res("Data loaded")
+        //     }else{
+        //         rej("Error data no load");
+        //     }
+            
+        // })
+
+        // p.then((result)=>{
+        //     console.log(result);
+        // }).catch((e)=>{
+        //     console.log(e);
+        // })
+
+
+        // let res = new Promise((res,rej)=>{
+        //     let no = 5;
+
+        //     if(no % 2 == 0){
+        //         res("Even no")
+        //     }else{
+        //         rej("Odd no")
+        //     }
+
+        // })
+
+        // res
+        // .then((n)=>{
+        //     console.log(n);  
+        // }).catch((e)=>{
+        //     console.log(e);
+            
+        // })
+
+
+        //event loop
+
+        // console.log("start")
+
+        // setTimeout(()=>{
+        //     console.log("Hello");
+            
+        // },0)
+
+        // console.log("End");
+
+        // const sum = async()=>{
+
+        // }
+
+        // async function greet(){
+        //     return "Hello good evening"
+        // }
+
+
+
+        // greet().then((data)=>{
+        //     console.log(data);
+        // }).catch((e)=>{
+        //     console.log(e);
+            
+        // })
+
+
+        // function fetchData(){
+
+        //     return new Promise((res,rej)=>{
+
+
+        //         setTimeout(()=>{
+        //             res("Data Load")
+        //         },2000)
+
+        //     })
+
+        // }
+
+        // async function result(){
+        //     let data = await fetchData()
+        //     console.log(data);
+            
+        // }
+
+        // result()
+
+
+
+
+        const getPosts = async() => {
+            try{
+                let data = await fetch(`https://dummyjson.com/posts`);
+                
+                let res = await data.json();
+
+                console.log(res);
+                
+                
+            }catch(err){
+                console.log(err);
+                return false;
+            }
+        }
+        getPosts();
+
+
+        const getProducts = async() => {
+            try{
+                let data = await fetch(`https://dummyjson.com/products`)
+                let res = await data.json();
+                console.log(res);
+                
+            }catch(err){
+                console.log(err);
+                return false;
+            }
+        }
+        getProducts();
+
+
+
+        
+
+        
+        
+        
+
+    </script>
+
+</body>
+</html>

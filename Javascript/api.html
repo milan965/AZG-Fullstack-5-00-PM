@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #eef2ff, #f8fafc);
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .dashboard-title {
+            font-weight: 800;
+            color: #1e293b;
+        }
+
+        .subtitle {
+            color: #64748b;
+        }
+
+        .todo-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+        }
+
+        .card-header-custom {
+            background: white;
+            padding: 24px;
+            border-bottom: 1px solid #eef2f7;
+        }
+
+        .table {
+            margin-bottom: 0;
+        }
+
+        .table thead th {
+            background: #f8fafc;
+            color: #64748b;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            padding: 18px 24px;
+            white-space: nowrap;
+        }
+
+        .table tbody td {
+            padding: 18px 24px;
+            color: #334155;
+            vertical-align: middle;
+        }
+
+        .table tbody tr {
+            transition: all 0.2s ease;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f5f7ff;
+        }
+
+        .id-badge {
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: 700;
+            padding: 7px 12px;
+            border-radius: 8px;
+        }
+
+        .todo-text {
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .status-badge {
+            background: #dcfce7;
+            color: #15803d;
+            padding: 7px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .table-footer {
+            background: white;
+            padding: 18px 24px;
+            border-top: 1px solid #eef2f7;
+            color: #64748b;
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 24px;
+        }
+
+        .loading {
+            padding: 40px !important;
+            text-align: center;
+        }
+
+        @media (max-width: 576px) {
+            .dashboard-title {
+                font-size: 25px;
+            }
+
+            .card-header-custom {
+                padding: 18px;
+            }
+
+            .table thead th,
+            .table tbody td {
+                padding: 14px 16px;
+            }
+
+            .navbar-brand {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container py-2">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-check2-square me-2"></i>
+                TodoMaster
+            </a>
+
+            <span class="text-white small">
+                <i class="bi bi-person-circle me-2"></i>
+                Admin Dashboard
+            </span>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+
+        <!-- Page Heading -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-8">
+                <h1 class="dashboard-title">Todo Dashboard</h1>
+                <p class="subtitle mb-0">
+                    Manage and track your daily tasks in one place.
+                </p>
+            </div>
+
+            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                <span class="badge text-bg-light border px-3 py-2">
+                    <i class="bi bi-cloud-check text-success me-2"></i>
+                    Live API Data
+                </span>
+            </div>
+        </div>
+
+        <!-- Stats Card -->
+        <div class="row g-4 mb-4">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4 d-flex align-items-center">
+                        <div class="icon-box me-3"
+                             style="background:#eef2ff;color:#4f46e5;">
+                            <i class="bi bi-list-task"></i>
+                        </div>
+                        <div>
+                            <p class="text-secondary mb-1">Total Todos</p>
+                            <h3 class="fw-bold mb-0" id="totalCount">--</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4 d-flex align-items-center">
+                        <div class="icon-box me-3"
+                             style="background:#dcfce7;color:#15803d;">
+                            <i class="bi bi-check-circle"></i>
+                        </div>
+                        <div>
+                            <p class="text-secondary mb-1">Completed</p>
+                            <h3 class="fw-bold mb-0" id="completedCount">--</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4 d-flex align-items-center">
+                        <div class="icon-box me-3"
+                             style="background:#fef3c7;color:#b45309;">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+                        <div>
+                            <p class="text-secondary mb-1">Pending</p>
+                            <h3 class="fw-bold mb-0" id="pendingCount">--</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Todo Table -->
+        <div class="card todo-card">
+
+            <div class="card-header-custom d-flex flex-wrap
+                        justify-content-between align-items-center gap-3">
+
+                <div>
+                    <h5 class="fw-bold mb-1">
+                        <i class="bi bi-table text-primary me-2"></i>
+                        All Todo Records
+                    </h5>
+                    <p class="text-secondary small mb-0">
+                        All tasks fetched from the DummyJSON API
+                    </p>
+                </div>
+
+                <span class="badge rounded-pill text-bg-primary px-3 py-2">
+                    <i class="bi bi-database me-1"></i>
+                    Todo List
+                </span>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Todo Description</th>
+                            <th>Status</th>
+                            <th>User ID</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="record">
+                        <tr>
+                            <td colspan="4" class="loading">
+                                <div class="spinner-border text-primary"
+                                     role="status">
+                                </div>
+                                <p class="text-secondary mt-3 mb-0">
+                                    Loading todos...
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="table-footer d-flex flex-wrap
+                        justify-content-between gap-2">
+                <small>
+                    <i class="bi bi-info-circle me-1"></i>
+                    Data provided by DummyJSON
+                </small>
+
+                <small>
+                    Total Records: <strong id="footerCount">--</strong>
+                </small>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-4">
+            <p class="text-secondary small">
+                © 2026 TodoMaster Dashboard | Built with Bootstrap 5
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+
+        fetch(`https://dummyjson.com/todos`)
+        .then(res => res.json())
+        .then((m) => {
+
+            let totaltodos = m.todos;
+
+            let data = "";
+
+            totaltodos.map((val) => {
+
+                data += `
+                    <tr>
+                        <td>
+                            <span class="id-badge">${val.id}</span>
+                        </td>
+
+                        <td>
+                            <span class="todo-text">${val.todo}</span>
+                        </td>
+
+                        <td>
+                            <span class="${val.completed
+                                ? 'status-badge'
+                                : 'badge text-bg-warning'}">
+                                <i class="bi ${val.completed
+                                    ? 'bi-check-circle-fill'
+                                    : 'bi-clock'} me-1"></i>
+                                ${val.completed ? 'Completed' : 'Pending'}
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="text-secondary">
+                                ${val.userId}
+                            </span>
+                        </td>
+                    </tr>
+                `;
+
+            });
+
+            document.getElementById('record').innerHTML = data;
+
+            // Update dashboard statistics
+            let completed = totaltodos.filter(val => val.completed).length;
+            let pending = totaltodos.length - completed;
+
+            document.getElementById('totalCount').textContent =
+                totaltodos.length;
+
+            document.getElementById('completedCount').textContent =
+                completed;
+
+            document.getElementById('pendingCount').textContent =
+                pending;
+
+            document.getElementById('footerCount').textContent =
+                totaltodos.length;
+
+        })
+        .catch((error) => {
+            document.getElementById('record').innerHTML = `
+                <tr>
+                    <td colspan="4" class="text-center py-5">
+                        <i class="bi bi-exclamation-circle text-danger fs-2"></i>
+                        <p class="text-danger mt-2 mb-0">
+                            Failed to load todos. Please try again.
+                        </p>
+                    </td>
+                </tr>
+            `;
+            console.error("Error fetching todos:", error);
+        });
+
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+```
